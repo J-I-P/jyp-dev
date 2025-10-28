@@ -3,9 +3,9 @@
 
 import Link from 'next/link';
 // Import necessary icons
-import { Download, TerminalSquare, Sun, Moon, Menu, Code, Database, Server, Container, Settings, Search, Zap, FileCode, Rocket, Building, TrendingUp, GitBranch, Wrench } from 'lucide-react';
+import { Download, TerminalSquare, Sun, Moon, Menu, Code, Database, Server, Container, Settings, Search, Zap, FileCode, Rocket, Building, TrendingUp, GitBranch, Wrench, Cloud } from 'lucide-react';
 // Import brand icons
-import { SiPython, SiPostgresql, SiTypescript, SiFastapi, SiFlask, SiDjango, SiDocker, SiKubernetes, SiHelm, SiElasticsearch, SiApachekafka } from 'react-icons/si'; 
+import { SiPython, SiTypescript, SiFastapi, SiFlask, SiDjango, SiDocker, SiKubernetes, SiHelm, SiElasticsearch, SiApachekafka, SiAmazon, SiFluentd, SiMysql } from 'react-icons/si'; 
 
 // Import Theme Context with the corrected relative path
 // NOTE: Use "../context/ThemeContext" if page.tsx is inside app/
@@ -108,7 +108,7 @@ export default function Home() {
             <div className="md:w-3/5">
               
               <p className="text-xl font-medium tracking-wider mb-2 text-secondary-accent">
-                Hi, I'm Nicole,
+                Hi, I'm Yi-Ping,
               </p>
 
               <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-4">
@@ -119,9 +119,10 @@ export default function Home() {
               
               <p className="text-lg md:text-xl leading-relaxed mb-8
                           text-gray-600 dark:text-gray-400">
-                I'm a backend software engineer specializing in Python ecosystems. I build robust APIs
-                with FastAPI and Flask, orchestrate containerized applications with Docker and Kubernetes,
-                and architect scalable systems using Elasticsearch and Kafka for high-performance data processing.
+                Senior Software Engineer with 3 years of experience, known for adaptability and
+                problem-solving skills, delivering high-quality solutions under pressure. I specialize in building
+                scalable backend systems with Python, FastAPI, and Flask, orchestrating containerized applications
+                with Docker and Kubernetes, and architecting data pipelines using Kafka and Elasticsearch.
               </p>
 
               {/* CTA Buttons */}
@@ -226,11 +227,11 @@ export default function Home() {
                           <p className="font-semibold text-primary-accent mb-2">As Senior Software Engineer (2025 - Present):</p>
 
                           <div className="space-y-2 ml-3">
-                            <p><span className="inline-block w-2 h-2 bg-primary-accent rounded-full mr-3"></span><span className="font-medium">Developed RAG-based Chatbot with Elasticsearch</span> - Created intelligent chatbot using Retrieval-Augmented Generation, leveraging Elasticsearch for semantic search and knowledge retrieval</p>
+                            <p><span className="inline-block w-2 h-2 bg-primary-accent rounded-full mr-3"></span><span className="font-medium">Video Subtitle Speech Recognition Technology Upgrade</span> - Led the upgrade from Vosk to Faster Whisper, improving accuracy and reducing processing time. Optimized audio processing workflow and managed technology selection, model integration, and performance optimization</p>
 
-                            <p><span className="inline-block w-2 h-2 bg-secondary-accent rounded-full mr-3"></span><span className="font-medium">Optimized Speech Recognition Pipeline</span> - Migrated subtitle generation model from Vosk to Faster-Whisper, achieving 3x performance improvement and reduced latency</p>
+                            <p><span className="inline-block w-2 h-2 bg-secondary-accent rounded-full mr-3"></span><span className="font-medium">OpenAI Chatbot Optimization</span> - Led Elasticsearch and RAG data processing workflows, integrating RAG technology to enhance chatbot response accuracy and speed. Optimized system architecture to reduce response latency</p>
 
-                            <p><span className="inline-block w-2 h-2 bg-primary-accent/70 rounded-full mr-3"></span><span className="font-medium">Technical Leadership</span> - Leading technical initiatives and mentoring team members on backend architecture and best practices</p>
+                            <p><span className="inline-block w-2 h-2 bg-primary-accent/70 rounded-full mr-3"></span><span className="font-medium">Infrastructure Modernization</span> - Transitioned from Docker to self-created Helm chart for Kubernetes Pod deployment, improving scalability and flexibility</p>
                           </div>
                         </div>
 
@@ -239,11 +240,11 @@ export default function Home() {
                           <p className="font-semibold text-secondary-accent mb-2">As Software Engineer (2022 - 2025):</p>
 
                           <div className="space-y-2 ml-3">
-                            <p><span className="inline-block w-2 h-2 bg-secondary-accent rounded-full mr-3"></span><span className="font-medium">Built Kafka Subscription System</span> - Designed and implemented scalable event-driven architecture for real-time data processing across microservices</p>
+                            <p><span className="inline-block w-2 h-2 bg-secondary-accent rounded-full mr-3"></span><span className="font-medium">Kafka Real-time Push Notification System</span> - Independently designed and implemented a real-time push notification system handling high-concurrency requests and triggering notifications via Firebase and APNs. Implemented event-driven architecture where data changes trigger Kafka events</p>
 
-                            <p><span className="inline-block w-2 h-2 bg-primary-accent rounded-full mr-3"></span><span className="font-medium">API Development & Integration</span> - Built high-performance REST APIs using FastAPI and Flask, handling thousands of concurrent requests with proper error handling and monitoring</p>
+                            <p><span className="inline-block w-2 h-2 bg-primary-accent rounded-full mr-3"></span><span className="font-medium">Fluentd Data Pipeline Implementation</span> - Designed and maintained a Fluentd data pipeline to integrate data from MySQL into Elasticsearch. Configured Fluentd plugins for data transformation and improved data transmission efficiency</p>
 
-                            <p><span className="inline-block w-2 h-2 bg-secondary-accent/70 rounded-full mr-3"></span><span className="font-medium">Infrastructure & DevOps</span> - Orchestrated containerized applications with Docker and Kubernetes, implementing CI/CD pipelines for automated deployments</p>
+                            <p><span className="inline-block w-2 h-2 bg-secondary-accent/70 rounded-full mr-3"></span><span className="font-medium">Infrastructure Optimization</span> - Transitioned deployment from custom Docker images to Bitnami's Helm charts for Kubernetes, improving system scalability and maintainability</p>
                           </div>
                         </div>
 
@@ -267,6 +268,75 @@ export default function Home() {
           </div>
         </section>
 
+        {/* --- EDUCATION SECTION --- */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="text-primary-accent">Education</span> & Background
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Academic foundation in Computer Science and Information Engineering
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-8 shadow-lg">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-primary-accent mb-2">Master's Degree</h3>
+                  <h4 className="text-xl font-semibold text-secondary-accent">Computer Science and Information Engineering</h4>
+                </div>
+                <div className="text-right">
+                  <p className="text-lg font-semibold text-gray-700 dark:text-gray-300">National Chung Cheng University</p>
+                  <p className="text-secondary-accent font-medium">Jan 2019 - Dec 2021</p>
+                </div>
+              </div>
+
+              <p className="text-gray-600 dark:text-gray-400 mb-6">
+                Advanced studies in computer science fundamentals, software engineering, and information systems.
+                Developed strong analytical and problem-solving skills through research-oriented coursework and projects.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h5 className="font-semibold text-primary-accent mb-3">Languages</h5>
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700 dark:text-gray-300">Mandarin</span>
+                      <div className="flex space-x-1">
+                        <div className="w-3 h-3 bg-primary-accent rounded-full"></div>
+                        <div className="w-3 h-3 bg-primary-accent rounded-full"></div>
+                        <div className="w-3 h-3 bg-primary-accent rounded-full"></div>
+                        <div className="w-3 h-3 bg-primary-accent rounded-full"></div>
+                        <div className="w-3 h-3 bg-primary-accent rounded-full"></div>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700 dark:text-gray-300">English</span>
+                      <div className="flex space-x-1">
+                        <div className="w-3 h-3 bg-secondary-accent rounded-full"></div>
+                        <div className="w-3 h-3 bg-secondary-accent rounded-full"></div>
+                        <div className="w-3 h-3 bg-secondary-accent rounded-full"></div>
+                        <div className="w-3 h-3 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+                        <div className="w-3 h-3 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 className="font-semibold text-primary-accent mb-3">Academic Focus</h5>
+                  <div className="space-y-2 text-gray-600 dark:text-gray-400">
+                    <p><span className="inline-block w-2 h-2 bg-primary-accent rounded-full mr-2"></span>Software Engineering</p>
+                    <p><span className="inline-block w-2 h-2 bg-secondary-accent rounded-full mr-2"></span>Information Systems</p>
+                    <p><span className="inline-block w-2 h-2 bg-primary-accent/70 rounded-full mr-2"></span>Computer Science Fundamentals</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* --- SKILLS SECTION --- */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
@@ -281,7 +351,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
 
             {/* Backend Languages */}
             <div className="group bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-primary-accent/30">
@@ -490,14 +560,69 @@ export default function Home() {
                   <div className="flex justify-between items-center mb-1">
                     <div className="flex items-center">
                       <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
-                        <SiPostgresql className="w-3 h-3 text-[#336791]" />
+                        <SiMysql className="w-3 h-3 text-[#4479a1]" />
                       </div>
-                      <span className="text-gray-700 dark:text-gray-300 font-medium">PostgreSQL</span>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">MySQL</span>
                     </div>
-                    <span className="text-xs text-primary-accent font-semibold">Expert</span>
+                    <span className="text-xs text-primary-accent font-semibold">Advanced</span>
                   </div>
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[90%] transition-all duration-1000 ease-out delay-200 group-hover:animate-pulse"></div>
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[85%] transition-all duration-1000 ease-out delay-200 group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Cloud Platforms */}
+            <div className="group bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-primary-accent/30">
+              <div className="flex items-center mb-4">
+                <Server className="w-8 h-8 mr-3 text-primary-accent" />
+                <h3 className="text-xl font-semibold text-primary-accent">Cloud Platforms</h3>
+              </div>
+
+              <div className="space-y-3">
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <Cloud className="w-3 h-3 text-[#0078d4]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Azure</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Proficient</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[75%] transition-all duration-1000 ease-out group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiAmazon className="w-3 h-3 text-[#ff9900]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">AWS</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Proficient</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[75%] transition-all duration-1000 ease-out delay-100 group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiFluentd className="w-3 h-3 text-[#0e83c8]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Fluentd</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Advanced</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[80%] transition-all duration-1000 ease-out delay-200 group-hover:animate-pulse"></div>
                   </div>
                 </div>
               </div>
@@ -626,41 +751,41 @@ export default function Home() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-primary-accent group-hover:text-secondary-accent transition-colors duration-300">
-                Microservices API Platform
+                Video Subtitle Speech Recognition
               </h3>
 
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                High-performance REST API built with FastAPI, handling <span className="font-semibold text-primary-accent">10k+ requests/minute</span> with Redis caching and PostgreSQL. Features auto-scaling and comprehensive monitoring.
+                Led the upgrade of speech recognition technology from <span className="font-semibold text-primary-accent">Vosk to Faster Whisper</span>, improving accuracy and reducing processing time. Optimized audio processing workflow and managed technology selection with performance optimization.
               </p>
 
               {/* Key Metrics */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center p-3 bg-primary-accent/10 rounded-lg">
-                  <div className="text-2xl font-bold text-primary-accent">10k+</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">Requests/min</div>
+                  <div className="text-2xl font-bold text-primary-accent">3x</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Performance</div>
                 </div>
                 <div className="text-center p-3 bg-secondary-accent/10 rounded-lg">
-                  <div className="text-2xl font-bold text-secondary-accent">99.9%</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">Uptime</div>
+                  <div className="text-2xl font-bold text-secondary-accent">Improved</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Accuracy</div>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="px-3 py-1 bg-[#009688]/20 text-[#009688] rounded-full text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-[#009688] rounded-full mr-2"></div>
-                  FastAPI
+                <span className="px-3 py-1 bg-[#3776ab]/20 text-[#3776ab] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#3776ab] rounded-full mr-2"></div>
+                  Python
                 </span>
-                <span className="px-3 py-1 bg-[#336791]/20 text-[#336791] rounded-full text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-[#336791] rounded-full mr-2"></div>
-                  PostgreSQL
-                </span>
-                <span className="px-3 py-1 bg-red-500/20 text-red-500 rounded-full text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
-                  Redis
+                <span className="px-3 py-1 bg-purple-500/20 text-purple-500 rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+                  Faster Whisper
                 </span>
                 <span className="px-3 py-1 bg-[#2496ed]/20 text-[#2496ed] rounded-full text-sm font-medium flex items-center">
                   <div className="w-2 h-2 bg-[#2496ed] rounded-full mr-2"></div>
                   Docker
+                </span>
+                <span className="px-3 py-1 bg-[#0f1689]/20 text-[#0f1689] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#0f1689] rounded-full mr-2"></div>
+                  Helm
                 </span>
               </div>
 
@@ -691,22 +816,22 @@ export default function Home() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-primary-accent group-hover:text-secondary-accent transition-colors duration-300">
-                Real-time Data Pipeline
+                Kafka Real-time Push Notification
               </h3>
 
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                Event-driven architecture using Kafka for streaming data processing with Elasticsearch for analytics and search. Processes <span className="font-semibold text-secondary-accent">millions of events daily</span>.
+                Independently designed and implemented a real-time push notification system based on Kafka, handling <span className="font-semibold text-secondary-accent">high-concurrency requests</span> and triggering notifications via Firebase and APNs with event-driven architecture.
               </p>
 
               {/* Key Metrics */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center p-3 bg-secondary-accent/10 rounded-lg">
-                  <div className="text-2xl font-bold text-secondary-accent">1M+</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">Events/day</div>
+                  <div className="text-2xl font-bold text-secondary-accent">Real-time</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Notifications</div>
                 </div>
                 <div className="text-center p-3 bg-primary-accent/10 rounded-lg">
-                  <div className="text-2xl font-bold text-primary-accent">&lt;100ms</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">Latency</div>
+                  <div className="text-2xl font-bold text-primary-accent">Event-driven</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Architecture</div>
                 </div>
               </div>
 
@@ -715,17 +840,17 @@ export default function Home() {
                   <div className="w-2 h-2 bg-[#231f20] dark:bg-white rounded-full mr-2"></div>
                   Kafka
                 </span>
-                <span className="px-3 py-1 bg-[#005571]/20 text-[#005571] rounded-full text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-[#005571] rounded-full mr-2"></div>
-                  Elasticsearch
+                <span className="px-3 py-1 bg-orange-500/20 text-orange-500 rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                  Firebase
                 </span>
-                <span className="px-3 py-1 bg-[#3776ab]/20 text-[#3776ab] rounded-full text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-[#3776ab] rounded-full mr-2"></div>
-                  Python
+                <span className="px-3 py-1 bg-gray-500/20 text-gray-500 rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-gray-500 rounded-full mr-2"></div>
+                  APNs
                 </span>
-                <span className="px-3 py-1 bg-[#326ce5]/20 text-[#326ce5] rounded-full text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-[#326ce5] rounded-full mr-2"></div>
-                  Kubernetes
+                <span className="px-3 py-1 bg-[#0f1689]/20 text-[#0f1689] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#0f1689] rounded-full mr-2"></div>
+                  Helm
                 </span>
               </div>
 
@@ -756,41 +881,41 @@ export default function Home() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-primary-accent group-hover:text-secondary-accent transition-colors duration-300">
-                Scalable Web Service
+                Fluentd Data Pipeline
               </h3>
 
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                Flask-based service with automated deployment pipeline using Helm charts and Kubernetes orchestration. Features <span className="font-semibold text-purple-500">zero-downtime deployments</span>.
+                Designed and maintained a Fluentd data pipeline to integrate data from MySQL into Elasticsearch. Configured <span className="font-semibold text-purple-500">Fluentd plugins</span> for data transformation and improved data transmission efficiency.
               </p>
 
               {/* Key Metrics */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center p-3 bg-purple-500/10 rounded-lg">
-                  <div className="text-2xl font-bold text-purple-500">100%</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">Automated</div>
+                  <div className="text-2xl font-bold text-purple-500">Data</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Integration</div>
                 </div>
                 <div className="text-center p-3 bg-pink-500/10 rounded-lg">
-                  <div className="text-2xl font-bold text-pink-500">0s</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">Downtime</div>
+                  <div className="text-2xl font-bold text-pink-500">Optimized</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Efficiency</div>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="px-3 py-1 bg-black/20 text-black dark:text-white rounded-full text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-black dark:bg-white rounded-full mr-2"></div>
-                  Flask
+                <span className="px-3 py-1 bg-[#0e83c8]/20 text-[#0e83c8] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#0e83c8] rounded-full mr-2"></div>
+                  Fluentd
                 </span>
-                <span className="px-3 py-1 bg-[#0f1689]/20 text-[#0f1689] rounded-full text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-[#0f1689] rounded-full mr-2"></div>
-                  Helm
+                <span className="px-3 py-1 bg-[#4479a1]/20 text-[#4479a1] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#4479a1] rounded-full mr-2"></div>
+                  MySQL
                 </span>
-                <span className="px-3 py-1 bg-green-500/20 text-green-500 rounded-full text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                  CI/CD
+                <span className="px-3 py-1 bg-[#005571]/20 text-[#005571] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#005571] rounded-full mr-2"></div>
+                  Elasticsearch
                 </span>
-                <span className="px-3 py-1 bg-green-600/20 text-green-600 rounded-full text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mr-2"></div>
-                  MongoDB
+                <span className="px-3 py-1 bg-[#3776ab]/20 text-[#3776ab] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#3776ab] rounded-full mr-2"></div>
+                  Python
                 </span>
               </div>
 
@@ -838,7 +963,7 @@ export default function Home() {
                 <span>GitHub</span>
               </a>
 
-              <a href="https://linkedin.com/in/yourlinkedin"
+              <a href="https://linkedin.com/in/yi-ping-jiang/"
                  className="flex items-center space-x-2 px-6 py-3 text-lg font-semibold
                             text-light-text dark:text-dark-text
                             border-2 border-secondary-accent rounded-lg
