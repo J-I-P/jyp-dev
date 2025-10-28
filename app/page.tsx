@@ -214,37 +214,45 @@ export default function Home() {
                         <p className="text-sm text-secondary-accent">Feb 2022 - Feb 2025</p>
                       </div>
 
-                      <p className="text-gray-600 dark:text-gray-400 mb-4">
-                        Building scalable backend systems and APIs for cybersecurity solutions, focusing on
-                        high-performance data processing and microservices architecture. Recently promoted to
-                        Senior Software Engineer, leading technical initiatives and mentoring team members.
+                      <p className="text-gray-600 dark:text-gray-400 mb-6">
+                        Senior Software Engineer with 3+ years of experience building scalable backend systems and APIs
+                        for cybersecurity solutions. Expertise in high-performance data processing, microservices architecture,
+                        and leading technical initiatives.
                       </p>
 
-                      <div className="space-y-4 text-gray-600 dark:text-gray-400 mb-4">
+                      <div className="space-y-6 mb-4">
 
                         {/* Senior Software Engineer Projects */}
                         <div>
-                          <p className="font-semibold text-primary-accent mb-2">As Senior Software Engineer (2025 - Present):</p>
-
-                          <div className="space-y-2 ml-3">
-                            <p><span className="inline-block w-2 h-2 bg-primary-accent rounded-full mr-3"></span><span className="font-medium">Video Subtitle Speech Recognition Technology Upgrade</span> - Led the upgrade from Vosk to Faster Whisper, improving accuracy and reducing processing time. Optimized audio processing workflow and managed technology selection, model integration, and performance optimization</p>
-
-                            <p><span className="inline-block w-2 h-2 bg-secondary-accent rounded-full mr-3"></span><span className="font-medium">OpenAI Chatbot Optimization</span> - Led Elasticsearch and RAG data processing workflows, integrating RAG technology to enhance chatbot response accuracy and speed. Optimized system architecture to reduce response latency</p>
-
-                            <p><span className="inline-block w-2 h-2 bg-primary-accent/70 rounded-full mr-3"></span><span className="font-medium">Infrastructure Modernization</span> - Transitioned from Docker to self-created Helm chart for Kubernetes Pod deployment, improving scalability and flexibility</p>
+                          <h5 className="text-lg font-semibold text-primary-accent mb-3">Senior Software Engineer (Feb 2025 - Present)</h5>
+                          <div className="space-y-3">
+                            <div className="border-l-3 border-primary-accent pl-4">
+                              <h6 className="font-medium text-gray-800 dark:text-gray-200 mb-1">Speech Recognition Technology Upgrade</h6>
+                              <p className="text-gray-600 dark:text-gray-400 text-sm">Migrated from Vosk to <span className="text-primary-accent font-medium">Faster Whisper</span>, achieving significant performance improvements and enhanced accuracy</p>
+                            </div>
+                            <div className="border-l-3 border-secondary-accent pl-4">
+                              <h6 className="font-medium text-gray-800 dark:text-gray-200 mb-1">AI Chatbot Development</h6>
+                              <p className="text-gray-600 dark:text-gray-400 text-sm">Built <span className="text-secondary-accent font-medium">RAG-based chatbot</span> using Elasticsearch for semantic search and knowledge retrieval</p>
+                            </div>
+                            <div className="border-l-3 border-primary-accent/70 pl-4">
+                              <h6 className="font-medium text-gray-800 dark:text-gray-200 mb-1">Infrastructure Modernization</h6>
+                              <p className="text-gray-600 dark:text-gray-400 text-sm">Transitioned to <span className="text-primary-accent font-medium">self-created Helm charts</span> for Kubernetes deployment optimization</p>
+                            </div>
                           </div>
                         </div>
 
                         {/* Software Engineer Projects */}
                         <div>
-                          <p className="font-semibold text-secondary-accent mb-2">As Software Engineer (2022 - 2025):</p>
-
-                          <div className="space-y-2 ml-3">
-                            <p><span className="inline-block w-2 h-2 bg-secondary-accent rounded-full mr-3"></span><span className="font-medium">Kafka Real-time Push Notification System</span> - Independently designed and implemented a real-time push notification system handling high-concurrency requests and triggering notifications via Firebase and APNs. Implemented event-driven architecture where data changes trigger Kafka events</p>
-
-                            <p><span className="inline-block w-2 h-2 bg-primary-accent rounded-full mr-3"></span><span className="font-medium">Fluentd Data Pipeline Implementation</span> - Designed and maintained a Fluentd data pipeline to integrate data from MySQL into Elasticsearch. Configured Fluentd plugins for data transformation and improved data transmission efficiency</p>
-
-                            <p><span className="inline-block w-2 h-2 bg-secondary-accent/70 rounded-full mr-3"></span><span className="font-medium">Infrastructure Optimization</span> - Transitioned deployment from custom Docker images to Bitnami's Helm charts for Kubernetes, improving system scalability and maintainability</p>
+                          <h5 className="text-lg font-semibold text-secondary-accent mb-3">Software Engineer (Feb 2022 - Feb 2025)</h5>
+                          <div className="space-y-3">
+                            <div className="border-l-3 border-secondary-accent pl-4">
+                              <h6 className="font-medium text-gray-800 dark:text-gray-200 mb-1">Real-time Notification System</h6>
+                              <p className="text-gray-600 dark:text-gray-400 text-sm">Designed <span className="text-secondary-accent font-medium">Kafka-based system</span> handling high-concurrency requests with Firebase and APNs integration</p>
+                            </div>
+                            <div className="border-l-3 border-primary-accent pl-4">
+                              <h6 className="font-medium text-gray-800 dark:text-gray-200 mb-1">Data Pipeline Development</h6>
+                              <p className="text-gray-600 dark:text-gray-400 text-sm">Built <span className="text-primary-accent font-medium">Fluentd pipeline</span> for MySQL to Elasticsearch data integration and transformation</p>
+                            </div>
                           </div>
                         </div>
 
