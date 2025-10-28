@@ -3,7 +3,9 @@
 
 import Link from 'next/link';
 // Import necessary icons
-import { Download, TerminalSquare, Sun, Moon, Menu } from 'lucide-react'; 
+import { Download, TerminalSquare, Sun, Moon, Menu, Code, Database, Server, Container, Settings, Search, Zap, FileCode, Rocket, Building, TrendingUp, GitBranch, Wrench } from 'lucide-react';
+// Import brand icons
+import { SiPython, SiPostgresql, SiTypescript, SiFastapi, SiFlask, SiDjango, SiDocker, SiKubernetes, SiHelm, SiElasticsearch, SiApachekafka } from 'react-icons/si'; 
 
 // Import Theme Context with the corrected relative path
 // NOTE: Use "../context/ThemeContext" if page.tsx is inside app/
@@ -224,11 +226,11 @@ export default function Home() {
                           <p className="font-semibold text-primary-accent mb-2">As Senior Software Engineer (2025 - Present):</p>
 
                           <div className="space-y-2 ml-3">
-                            <p>• <span className="font-medium">Developed RAG-based Chatbot with Elasticsearch</span> - Created intelligent chatbot using Retrieval-Augmented Generation, leveraging Elasticsearch for semantic search and knowledge retrieval</p>
+                            <p><span className="inline-block w-2 h-2 bg-primary-accent rounded-full mr-3"></span><span className="font-medium">Developed RAG-based Chatbot with Elasticsearch</span> - Created intelligent chatbot using Retrieval-Augmented Generation, leveraging Elasticsearch for semantic search and knowledge retrieval</p>
 
-                            <p>• <span className="font-medium">Optimized Speech Recognition Pipeline</span> - Migrated subtitle generation model from Vosk to Faster-Whisper, achieving 3x performance improvement and reduced latency</p>
+                            <p><span className="inline-block w-2 h-2 bg-secondary-accent rounded-full mr-3"></span><span className="font-medium">Optimized Speech Recognition Pipeline</span> - Migrated subtitle generation model from Vosk to Faster-Whisper, achieving 3x performance improvement and reduced latency</p>
 
-                            <p>• <span className="font-medium">Technical Leadership</span> - Leading technical initiatives and mentoring team members on backend architecture and best practices</p>
+                            <p><span className="inline-block w-2 h-2 bg-primary-accent/70 rounded-full mr-3"></span><span className="font-medium">Technical Leadership</span> - Leading technical initiatives and mentoring team members on backend architecture and best practices</p>
                           </div>
                         </div>
 
@@ -237,11 +239,11 @@ export default function Home() {
                           <p className="font-semibold text-secondary-accent mb-2">As Software Engineer (2022 - 2025):</p>
 
                           <div className="space-y-2 ml-3">
-                            <p>• <span className="font-medium">Built Kafka Subscription System</span> - Designed and implemented scalable event-driven architecture for real-time data processing across microservices</p>
+                            <p><span className="inline-block w-2 h-2 bg-secondary-accent rounded-full mr-3"></span><span className="font-medium">Built Kafka Subscription System</span> - Designed and implemented scalable event-driven architecture for real-time data processing across microservices</p>
 
-                            <p>• <span className="font-medium">API Development & Integration</span> - Built high-performance REST APIs using FastAPI and Flask, handling thousands of concurrent requests with proper error handling and monitoring</p>
+                            <p><span className="inline-block w-2 h-2 bg-primary-accent rounded-full mr-3"></span><span className="font-medium">API Development & Integration</span> - Built high-performance REST APIs using FastAPI and Flask, handling thousands of concurrent requests with proper error handling and monitoring</p>
 
-                            <p>• <span className="font-medium">Infrastructure & DevOps</span> - Orchestrated containerized applications with Docker and Kubernetes, implementing CI/CD pipelines for automated deployments</p>
+                            <p><span className="inline-block w-2 h-2 bg-secondary-accent/70 rounded-full mr-3"></span><span className="font-medium">Infrastructure & DevOps</span> - Orchestrated containerized applications with Docker and Kubernetes, implementing CI/CD pipelines for automated deployments</p>
                           </div>
                         </div>
 
@@ -271,55 +273,260 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="text-primary-accent">Tech</span> Stack
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">
               Technologies I work with to build scalable backend systems
+            </p>
+            <p className="text-sm text-secondary-accent">
+              🎯 Click on any skill to see my experience level
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
             {/* Backend Languages */}
-            <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-primary-accent">Languages</h3>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                <li>• Python</li>
-                <li>• SQL</li>
-                <li>• JavaScript/TypeScript</li>
-              </ul>
+            <div className="group bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-primary-accent/30">
+              <div className="flex items-center mb-4">
+                <Code className="w-8 h-8 mr-3 text-primary-accent" />
+                <h3 className="text-xl font-semibold text-primary-accent group-hover:text-primary-accent">Languages</h3>
+              </div>
+
+              <div className="space-y-3">
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiPython className="w-3 h-3 text-[#3776ab]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Python</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Expert</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[95%] transition-all duration-1000 ease-out group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <Database className="w-3 h-3 text-primary-accent" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">SQL</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Advanced</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[85%] transition-all duration-1000 ease-out delay-100 group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiTypescript className="w-3 h-3 text-[#3178c6]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">TypeScript</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Proficient</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[75%] transition-all duration-1000 ease-out delay-200 group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Frameworks */}
-            <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-primary-accent">Frameworks</h3>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                <li>• FastAPI</li>
-                <li>• Flask</li>
-                <li>• Django</li>
-              </ul>
+            <div className="group bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-primary-accent/30">
+              <div className="flex items-center mb-4">
+                <Zap className="w-8 h-8 mr-3 text-primary-accent" />
+                <h3 className="text-xl font-semibold text-primary-accent">Frameworks</h3>
+              </div>
+
+              <div className="space-y-3">
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiFastapi className="w-3 h-3 text-[#009688]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">FastAPI</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Expert</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[90%] transition-all duration-1000 ease-out group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiFlask className="w-3 h-3 text-[#000000]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Flask</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Advanced</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[85%] transition-all duration-1000 ease-out delay-100 group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiDjango className="w-3 h-3 text-[#092e20]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Django</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Proficient</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[70%] transition-all duration-1000 ease-out delay-200 group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* DevOps & Infrastructure */}
-            <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-primary-accent">DevOps</h3>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                <li>• Docker</li>
-                <li>• Kubernetes</li>
-                <li>• Helm</li>
-                <li>• CI/CD</li>
-              </ul>
+            <div className="group bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-primary-accent/30">
+              <div className="flex items-center mb-4">
+                <Container className="w-8 h-8 mr-3 text-primary-accent" />
+                <h3 className="text-xl font-semibold text-primary-accent">DevOps</h3>
+              </div>
+
+              <div className="space-y-3">
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiDocker className="w-3 h-3 text-[#2496ed]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Docker</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Expert</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[90%] transition-all duration-1000 ease-out group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiKubernetes className="w-3 h-3 text-[#326ce5]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Kubernetes</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Advanced</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[80%] transition-all duration-1000 ease-out delay-100 group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiHelm className="w-3 h-3 text-[#0f1689]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Helm</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Proficient</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[75%] transition-all duration-1000 ease-out delay-200 group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Data & Messaging */}
-            <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-primary-accent">Data & Messaging</h3>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                <li>• Elasticsearch</li>
-                <li>• Kafka</li>
-                <li>• PostgreSQL</li>
-                <li>• Redis</li>
-              </ul>
+            <div className="group bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-primary-accent/30">
+              <div className="flex items-center mb-4">
+                <Database className="w-8 h-8 mr-3 text-primary-accent" />
+                <h3 className="text-xl font-semibold text-primary-accent">Data & Messaging</h3>
+              </div>
+
+              <div className="space-y-3">
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiElasticsearch className="w-3 h-3 text-[#005571]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Elasticsearch</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Advanced</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[85%] transition-all duration-1000 ease-out group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiApachekafka className="w-3 h-3 text-[#231f20] dark:text-[#ffffff]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">Kafka</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Advanced</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[80%] transition-all duration-1000 ease-out delay-100 group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+
+                <div className="skill-item">
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 bg-gray-100 dark:bg-gray-600 rounded-sm flex items-center justify-center mr-2">
+                        <SiPostgresql className="w-3 h-3 text-[#336791]" />
+                      </div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">PostgreSQL</span>
+                    </div>
+                    <span className="text-xs text-primary-accent font-semibold">Expert</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-primary-accent to-secondary-accent h-2 rounded-full w-[90%] transition-all duration-1000 ease-out delay-200 group-hover:animate-pulse"></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
+          </div>
+
+          {/* Interactive Skills Tags */}
+          <div className="mt-12 text-center">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-300">
+              🏆 Most Used Technologies
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              <span className="px-4 py-2 bg-gradient-to-r from-primary-accent to-secondary-accent text-white rounded-full font-semibold hover:scale-110 transition-transform duration-300 cursor-pointer shadow-lg">
+                Python
+              </span>
+              <span className="px-4 py-2 bg-gradient-to-r from-primary-accent to-secondary-accent text-white rounded-full font-semibold hover:scale-110 transition-transform duration-300 cursor-pointer shadow-lg">
+                FastAPI
+              </span>
+              <span className="px-4 py-2 bg-gradient-to-r from-primary-accent to-secondary-accent text-white rounded-full font-semibold hover:scale-110 transition-transform duration-300 cursor-pointer shadow-lg">
+                Docker
+              </span>
+              <span className="px-4 py-2 bg-gradient-to-r from-primary-accent to-secondary-accent text-white rounded-full font-semibold hover:scale-110 transition-transform duration-300 cursor-pointer shadow-lg">
+                Elasticsearch
+              </span>
+              <span className="px-4 py-2 bg-gradient-to-r from-primary-accent to-secondary-accent text-white rounded-full font-semibold hover:scale-110 transition-transform duration-300 cursor-pointer shadow-lg">
+                Kafka
+              </span>
+            </div>
           </div>
         </section>
 
@@ -338,7 +545,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
               <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg">
-                <div className="text-primary-accent text-3xl mb-4">🚀</div>
+                <Rocket className="w-12 h-12 text-primary-accent mb-4" />
                 <h3 className="text-xl font-semibold mb-3">API Design & Development</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Building robust, scalable RESTful APIs with FastAPI and Flask that handle high traffic and complex business logic.
@@ -346,7 +553,7 @@ export default function Home() {
               </div>
 
               <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg">
-                <div className="text-primary-accent text-3xl mb-4">🏗️</div>
+                <Building className="w-12 h-12 text-primary-accent mb-4" />
                 <h3 className="text-xl font-semibold mb-3">System Architecture</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Designing microservices architectures and distributed systems that scale efficiently and maintain high availability.
@@ -354,7 +561,7 @@ export default function Home() {
               </div>
 
               <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg">
-                <div className="text-primary-accent text-3xl mb-4">⚡</div>
+                <TrendingUp className="w-12 h-12 text-primary-accent mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Performance Optimization</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Optimizing database queries, implementing caching strategies, and improving system performance under load.
@@ -362,7 +569,7 @@ export default function Home() {
               </div>
 
               <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg">
-                <div className="text-primary-accent text-3xl mb-4">🔄</div>
+                <GitBranch className="w-12 h-12 text-primary-accent mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Data Pipeline Design</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Creating efficient data processing pipelines using Kafka and Elasticsearch for real-time analytics and search.
@@ -370,7 +577,7 @@ export default function Home() {
               </div>
 
               <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg">
-                <div className="text-primary-accent text-3xl mb-4">🐳</div>
+                <Container className="w-12 h-12 text-primary-accent mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Containerization & Deployment</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Orchestrating containerized applications with Docker and Kubernetes for reliable, scalable deployments.
@@ -378,7 +585,7 @@ export default function Home() {
               </div>
 
               <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg">
-                <div className="text-primary-accent text-3xl mb-4">🔍</div>
+                <Wrench className="w-12 h-12 text-primary-accent mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Problem Solving</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Debugging complex distributed systems and implementing solutions for challenging technical requirements.
