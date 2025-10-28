@@ -151,7 +151,7 @@ export default function Home() {
                        transition-colors duration-500">
         
         {/* --- HERO SECTION --- */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 border-b border-gray-200 dark:border-gray-700">
           
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             
@@ -215,7 +215,7 @@ export default function Home() {
         </section>
 
         {/* --- EXPERIENCE SECTION --- */}
-        <section className="bg-light-surface/50 dark:bg-dark-surface/50 py-16">
+        <section className="bg-light-surface/50 dark:bg-dark-surface/50 py-20 border-b border-gray-200 dark:border-gray-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -328,7 +328,7 @@ export default function Home() {
         </section>
 
         {/* --- EDUCATION SECTION --- */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-b border-gray-200 dark:border-gray-700">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="text-primary-accent">Education</span> & Background
@@ -397,7 +397,7 @@ export default function Home() {
         </section>
 
         {/* --- SKILLS SECTION --- */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-b border-gray-200 dark:border-gray-700">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="text-primary-accent">Tech</span> Stack
@@ -715,7 +715,7 @@ export default function Home() {
         </section>
 
         {/* --- WHAT I DO BEST SECTION --- */}
-        <section className="bg-light-surface/50 dark:bg-dark-surface/50 py-16">
+        <section className="bg-light-surface/50 dark:bg-dark-surface/50 py-20 border-b border-gray-200 dark:border-gray-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -781,7 +781,7 @@ export default function Home() {
         </section>
 
         {/* --- FEATURED PROJECTS SECTION --- */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Featured <span className="text-primary-accent">Projects</span>
