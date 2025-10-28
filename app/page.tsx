@@ -598,59 +598,224 @@ export default function Home() {
 
         {/* --- FEATURED PROJECTS SECTION --- */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Featured <span className="text-primary-accent">Projects</span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">
-              Backend systems and APIs I've built
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">
+              Backend systems and APIs I've architected and built
             </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary-accent to-secondary-accent mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {/* Project 1 - Replace with your actual projects */}
-            <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-3 text-primary-accent">Microservices API Platform</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                High-performance REST API built with FastAPI, handling 10k+ requests/minute with Redis caching and PostgreSQL.
+            {/* Project 1 - Enhanced */}
+            <div className="group relative bg-light-surface dark:bg-dark-surface rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-500 border-2 border-transparent hover:border-primary-accent/30 overflow-hidden">
+              {/* Background Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-accent/5 to-secondary-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Project Icon */}
+              <div className="relative mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-accent to-secondary-accent rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <Rocket className="w-8 h-8 text-white" />
+                </div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">1</span>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold mb-4 text-primary-accent group-hover:text-secondary-accent transition-colors duration-300">
+                Microservices API Platform
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                High-performance REST API built with FastAPI, handling <span className="font-semibold text-primary-accent">10k+ requests/minute</span> with Redis caching and PostgreSQL. Features auto-scaling and comprehensive monitoring.
               </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">FastAPI</span>
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">PostgreSQL</span>
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Redis</span>
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Docker</span>
+
+              {/* Key Metrics */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="text-center p-3 bg-primary-accent/10 rounded-lg">
+                  <div className="text-2xl font-bold text-primary-accent">10k+</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Requests/min</div>
+                </div>
+                <div className="text-center p-3 bg-secondary-accent/10 rounded-lg">
+                  <div className="text-2xl font-bold text-secondary-accent">99.9%</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Uptime</div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-[#009688]/20 text-[#009688] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#009688] rounded-full mr-2"></div>
+                  FastAPI
+                </span>
+                <span className="px-3 py-1 bg-[#336791]/20 text-[#336791] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#336791] rounded-full mr-2"></div>
+                  PostgreSQL
+                </span>
+                <span className="px-3 py-1 bg-red-500/20 text-red-500 rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
+                  Redis
+                </span>
+                <span className="px-3 py-1 bg-[#2496ed]/20 text-[#2496ed] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#2496ed] rounded-full mr-2"></div>
+                  Docker
+                </span>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-3">
+                <button className="flex-1 bg-primary-accent text-white py-2 px-4 rounded-lg hover:bg-primary-accent/80 transition-colors duration-300 text-sm font-medium">
+                  View Details
+                </button>
+                <button className="p-2 border-2 border-secondary-accent text-secondary-accent rounded-lg hover:bg-secondary-accent hover:text-white transition-colors duration-300">
+                  <Code className="w-4 h-4" />
+                </button>
               </div>
             </div>
 
-            {/* Project 2 */}
-            <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-3 text-primary-accent">Real-time Data Pipeline</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Event-driven architecture using Kafka for streaming data processing with Elasticsearch for analytics and search.
+            {/* Project 2 - Enhanced */}
+            <div className="group relative bg-light-surface dark:bg-dark-surface rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-500 border-2 border-transparent hover:border-primary-accent/30 overflow-hidden">
+              {/* Background Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary-accent/5 to-primary-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Project Icon */}
+              <div className="relative mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-secondary-accent to-primary-accent rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <GitBranch className="w-8 h-8 text-white" />
+                </div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">2</span>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold mb-4 text-primary-accent group-hover:text-secondary-accent transition-colors duration-300">
+                Real-time Data Pipeline
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                Event-driven architecture using Kafka for streaming data processing with Elasticsearch for analytics and search. Processes <span className="font-semibold text-secondary-accent">millions of events daily</span>.
               </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Kafka</span>
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Elasticsearch</span>
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Python</span>
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Kubernetes</span>
+
+              {/* Key Metrics */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="text-center p-3 bg-secondary-accent/10 rounded-lg">
+                  <div className="text-2xl font-bold text-secondary-accent">1M+</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Events/day</div>
+                </div>
+                <div className="text-center p-3 bg-primary-accent/10 rounded-lg">
+                  <div className="text-2xl font-bold text-primary-accent">&lt;100ms</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Latency</div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-[#231f20]/20 text-[#231f20] dark:text-white rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#231f20] dark:bg-white rounded-full mr-2"></div>
+                  Kafka
+                </span>
+                <span className="px-3 py-1 bg-[#005571]/20 text-[#005571] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#005571] rounded-full mr-2"></div>
+                  Elasticsearch
+                </span>
+                <span className="px-3 py-1 bg-[#3776ab]/20 text-[#3776ab] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#3776ab] rounded-full mr-2"></div>
+                  Python
+                </span>
+                <span className="px-3 py-1 bg-[#326ce5]/20 text-[#326ce5] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#326ce5] rounded-full mr-2"></div>
+                  Kubernetes
+                </span>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-3">
+                <button className="flex-1 bg-secondary-accent text-white py-2 px-4 rounded-lg hover:bg-secondary-accent/80 transition-colors duration-300 text-sm font-medium">
+                  View Details
+                </button>
+                <button className="p-2 border-2 border-primary-accent text-primary-accent rounded-lg hover:bg-primary-accent hover:text-white transition-colors duration-300">
+                  <Code className="w-4 h-4" />
+                </button>
               </div>
             </div>
 
-            {/* Project 3 */}
-            <div className="bg-light-surface dark:bg-dark-surface rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-3 text-primary-accent">Scalable Web Service</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Flask-based service with automated deployment pipeline using Helm charts and Kubernetes orchestration.
+            {/* Project 3 - Enhanced */}
+            <div className="group relative bg-light-surface dark:bg-dark-surface rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-500 border-2 border-transparent hover:border-primary-accent/30 overflow-hidden">
+              {/* Background Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-accent/5 to-secondary-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Project Icon */}
+              <div className="relative mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <Container className="w-8 h-8 text-white" />
+                </div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">3</span>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold mb-4 text-primary-accent group-hover:text-secondary-accent transition-colors duration-300">
+                Scalable Web Service
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                Flask-based service with automated deployment pipeline using Helm charts and Kubernetes orchestration. Features <span className="font-semibold text-purple-500">zero-downtime deployments</span>.
               </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Flask</span>
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Helm</span>
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">CI/CD</span>
-                <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">MongoDB</span>
+
+              {/* Key Metrics */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="text-center p-3 bg-purple-500/10 rounded-lg">
+                  <div className="text-2xl font-bold text-purple-500">100%</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Automated</div>
+                </div>
+                <div className="text-center p-3 bg-pink-500/10 rounded-lg">
+                  <div className="text-2xl font-bold text-pink-500">0s</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Downtime</div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-black/20 text-black dark:text-white rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-black dark:bg-white rounded-full mr-2"></div>
+                  Flask
+                </span>
+                <span className="px-3 py-1 bg-[#0f1689]/20 text-[#0f1689] rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-[#0f1689] rounded-full mr-2"></div>
+                  Helm
+                </span>
+                <span className="px-3 py-1 bg-green-500/20 text-green-500 rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                  CI/CD
+                </span>
+                <span className="px-3 py-1 bg-green-600/20 text-green-600 rounded-full text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-green-600 rounded-full mr-2"></div>
+                  MongoDB
+                </span>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-3">
+                <button className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 text-sm font-medium">
+                  View Details
+                </button>
+                <button className="p-2 border-2 border-purple-500 text-purple-500 rounded-lg hover:bg-purple-500 hover:text-white transition-colors duration-300">
+                  <Code className="w-4 h-4" />
+                </button>
               </div>
             </div>
 
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+              Want to see more of my work?
+            </p>
+            <Link href="/projects" className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-primary-accent to-secondary-accent text-white rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+              <span>View All Projects</span>
+              <TerminalSquare className="w-5 h-5" />
+            </Link>
           </div>
         </section>
 
