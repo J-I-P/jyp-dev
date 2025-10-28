@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // Import necessary icons
-import { Download, TerminalSquare, Sun, Moon, Menu, Code, Database, Server, Container, Settings, Search, Zap, FileCode, Rocket, Building, TrendingUp, GitBranch, Wrench, Cloud, ExternalLink, Mail, ChevronUp } from 'lucide-react';
+import { Download, TerminalSquare, Sun, Moon, Menu, Code, Database, Server, Container, Zap, Rocket, Building, TrendingUp, GitBranch, Wrench, Cloud, Mail, ChevronUp } from 'lucide-react';
 // Import brand icons
 import { SiPython, SiTypescript, SiFastapi, SiFlask, SiDjango, SiDocker, SiKubernetes, SiHelm, SiElasticsearch, SiApachekafka, SiAmazon, SiFluentd, SiMysql, SiGithub, SiLinkedin } from 'react-icons/si';
 
@@ -240,7 +240,7 @@ export default function HomePage() {
             <div className="max-w-4xl mx-auto">
               <div className="relative">
                 {/* Timeline line - matches experience item height */}
-                <div className="absolute left-8 md:left-1/2 transform md:-translate-x-px top-0 h-255 w-0.5 bg-primary-accent"></div>
+                <div className="absolute left-8 md:left-1/2 transform md:-translate-x-px top-0 h-234 w-0.5 bg-primary-accent"></div>
 
                 {/* Experience Item */}
                 <div className="relative flex items-center mb-8">
@@ -255,13 +255,6 @@ export default function HomePage() {
                         <span className="text-lg font-semibold text-secondary-accent">Feb 2022 - Present</span>
                       </div>
 
-                      <div className="mb-4">
-                        <h4 className="text-xl font-semibold text-primary-accent">Sr. Software Engineer</h4>
-                        <p className="text-sm text-secondary-accent mb-2">Feb 2025 - Present</p>
-
-                        <h4 className="text-lg font-semibold mt-3">Software Engineer</h4>
-                        <p className="text-sm text-secondary-accent">Feb 2022 - Feb 2025</p>
-                      </div>
 
                       <p className="text-gray-600 dark:text-gray-400 mb-6">
                         Senior Software Engineer with 3+ years of experience building scalable backend systems and APIs
@@ -269,11 +262,24 @@ export default function HomePage() {
                         and leading technical initiatives.
                       </p>
 
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Python</span>
+                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">FastAPI</span>
+                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Flask</span>
+                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Docker</span>
+                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Kubernetes</span>
+                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Kafka</span>
+                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Elasticsearch</span>
+                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Helm</span>
+                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Azure</span>
+                      </div>
+
                       <div className="space-y-6 mb-4">
 
                         {/* Senior Software Engineer Projects */}
                         <div>
-                          <h5 className="text-lg font-semibold text-primary-accent mb-3">Senior Software Engineer (Feb 2025 - Present)</h5>
+                          <h5 className="text-lg font-semibold text-primary-accent">Senior Software Engineer</h5>
+                          <p className="text-sm text-secondary-accent mb-3">Feb 2025 - Present</p>
                           <div className="space-y-3">
                             <div className="border-l-3 border-primary-accent pl-4">
                               <h6 className="font-medium text-gray-800 dark:text-gray-200 mb-1">Speech Recognition Technology Upgrade</h6>
@@ -292,7 +298,8 @@ export default function HomePage() {
 
                         {/* Software Engineer Projects */}
                         <div>
-                          <h5 className="text-lg font-semibold text-secondary-accent mb-3">Software Engineer (Feb 2022 - Feb 2025)</h5>
+                          <h5 className="text-lg font-semibold text-primary-accent">Software Engineer</h5>
+                          <p className="text-sm text-secondary-accent mb-3">Feb 2022 - Feb 2025</p>
                           <div className="space-y-3">
                             <div className="border-l-3 border-secondary-accent pl-4">
                               <h6 className="font-medium text-gray-800 dark:text-gray-200 mb-1">Real-time Notification System</h6>
@@ -305,16 +312,6 @@ export default function HomePage() {
                           </div>
                         </div>
 
-                      </div>
-
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Python</span>
-                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">FastAPI</span>
-                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Flask</span>
-                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Docker</span>
-                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Kubernetes</span>
-                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Kafka</span>
-                        <span className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">Elasticsearch</span>
                       </div>
                     </div>
                   </div>
