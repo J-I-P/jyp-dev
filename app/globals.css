@@ -1,37 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #F9FAFB;
-  --foreground: #1F2937;
-  --surface: #FFFFFF;
+@variant dark (html.dark &);
 
-  --primary-accent: #FF7F50;  
-  --secondary-accent: #007BFF; 
+:root {
+  /* Default to dark theme */
+  --background: #121212;
+  --foreground: #F3F4F6;
+  --surface: #1F2937;
+
+  /* Accent colors */
+  --primary-accent: #FF7F50;
+  --secondary-accent: #007BFF;
+}
+
+html.light {
+  --background: #F0ECD0;      /* 淡米黃色背景 */
+  --foreground: #3C2415;      /* 深褐色文字 */
+  --surface: #FAF0E6;         /* 鵝黃色表面 */
+  --extra-surface: #FAF0E6;
 }
 
 html.dark {
-  --background: #121212;      
-  --foreground: #F3F4F6;      
-  --surface: #1F2937;        
+  --background: #121212;
+  --foreground: #F3F4F6;
+  --surface: #1F2937;
 }
 
 @theme inline {
+  /* Use CSS variables for theme colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-surface: var(--surface);
-
   --color-primary-accent: var(--primary-accent);
   --color-secondary-accent: var(--secondary-accent);
 
+  /* Light theme colors for Tailwind classes */
+  --color-light-background: #FBF2E4;
+  --color-light-text: #3C2415;
+  --color-light-surface: #FAF0E6;
+  
+
+  /* Dark theme colors for Tailwind classes */
+  --color-dark-background: #121212;
+  --color-dark-text: #F3F4F6;
+  --color-dark-surface: #1F2937;
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 /* body {

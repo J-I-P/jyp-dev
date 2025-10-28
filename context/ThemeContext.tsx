@@ -46,15 +46,18 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   // useEffect: Runs after component mounts and handles DOM updates.
   useEffect(() => {
     const root = document.documentElement; // Targets the <html> element
-    
+
     // 1. Clear previous theme class to prevent conflicts
-    root.classList.remove('light', 'dark'); 
-    
+    root.classList.remove('light', 'dark');
+
     // 2. Set the current theme class (Tailwind CSS uses this 'dark' class)
     root.classList.add(theme);
-    
+
     // 3. Persist the user's choice to local storage
     localStorage.setItem('theme', theme);
+
+    // 4. Console log for debugging
+    console.log('ThemeContext: Applied theme class to html:', theme);
   }, [theme]); // Re-run effect whenever 'theme' state changes
 
   // Function to switch between themes

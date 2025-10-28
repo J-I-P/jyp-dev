@@ -18,13 +18,23 @@ import { useTheme } from '../context/ThemeContext';
 const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useTheme();
 
+  // Log current theme when component renders
+  useEffect(() => {
+    console.log('ThemeSwitcher: Current theme:', theme);
+  }, [theme]);
+
+  const handleToggleTheme = () => {
+    console.log('ThemeSwitcher: Button clicked - switching from', theme, 'to', theme === 'dark' ? 'light' : 'dark');
+    toggleTheme();
+  };
+
   return (
     <button
-      onClick={toggleTheme}
+      onClick={handleToggleTheme}
       aria-label="Toggle theme"
       className="p-2 rounded-full transition-all duration-300 ease-in-out
-                 bg-dark-surface hover:bg-primary-accent/20
-                 dark:bg-light-surface/10 dark:hover:bg-primary-accent/30"
+                 bg-light-surface hover:bg-primary-accent/20
+                 dark:bg-dark-surface dark:hover:bg-primary-accent/30"
     >
       {theme === 'dark' ? (
         <Sun className="h-5 w-5 text-yellow-400" />
