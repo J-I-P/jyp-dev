@@ -209,13 +209,15 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* RIGHT SIDE: Placeholder for Profile Image / Illustration */}
+            {/* RIGHT SIDE: Profile Image */}
             <div className="md:w-2/5 flex justify-center order-first md:order-last">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-secondary-accent/20 flex items-center justify-center
+                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden
                                  border-4 border-secondary-accent shadow-xl transform transition-transform duration-500 hover:rotate-3">
-                    <span className="text-2xl font-bold text-secondary-accent">
-                        [Placeholder Image]
-                    </span>
+                    <img
+                        src="/17896123.jpeg"
+                        alt="Yi-Ping Jiang Profile"
+                        className="w-full h-full object-cover"
+                    />
                 </div>
             </div>
 
