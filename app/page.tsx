@@ -2,10 +2,11 @@
 'use client'; // Required because we use useState/useEffect for the ThemeSwitcher
 
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 // Import necessary icons
-import { Download, TerminalSquare, Sun, Moon, Menu, Code, Database, Server, Container, Settings, Search, Zap, FileCode, Rocket, Building, TrendingUp, GitBranch, Wrench, Cloud } from 'lucide-react';
+import { Download, TerminalSquare, Sun, Moon, Menu, Code, Database, Server, Container, Settings, Search, Zap, FileCode, Rocket, Building, TrendingUp, GitBranch, Wrench, Cloud, ExternalLink, Mail, ChevronUp } from 'lucide-react';
 // Import brand icons
-import { SiPython, SiTypescript, SiFastapi, SiFlask, SiDjango, SiDocker, SiKubernetes, SiHelm, SiElasticsearch, SiApachekafka, SiAmazon, SiFluentd, SiMysql } from 'react-icons/si'; 
+import { SiPython, SiTypescript, SiFastapi, SiFlask, SiDjango, SiDocker, SiKubernetes, SiHelm, SiElasticsearch, SiApachekafka, SiAmazon, SiFluentd, SiMysql, SiGithub, SiLinkedin } from 'react-icons/si'; 
 
 // Import Theme Context with the corrected relative path
 // NOTE: Use "../context/ThemeContext" if page.tsx is inside app/
@@ -38,7 +39,56 @@ const ThemeSwitcher = () => {
 
 
 // ==========================================================
-// 2. Navbar Component (Embedded)
+// 2. ScrollToTop Component (Embedded)
+// ==========================================================
+const ScrollToTop = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show button when page is scrolled down
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  // Scroll to top smoothly
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  return (
+    <>
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-24 right-6 z-30
+                     w-12 h-12 bg-primary-accent text-white
+                     rounded-full shadow-lg hover:shadow-xl
+                     hover:bg-primary-accent/80 hover:scale-110
+                     transition-all duration-300 transform
+                     flex items-center justify-center"
+          aria-label="Scroll to top"
+        >
+          <ChevronUp className="w-6 h-6" />
+        </button>
+      )}
+    </>
+  );
+};
+
+
+// ==========================================================
+// 3. Navbar Component (Embedded)
 // ==========================================================
 const Navbar = () => {
   const navItems = [
@@ -87,16 +137,17 @@ const Navbar = () => {
 
 
 // ==========================================================
-// 3. Main Exported Home Component (Contains Navbar + Hero)
+// 4. Main Exported Home Component (Contains Navbar + Hero + ScrollToTop)
 // ==========================================================
 export default function Home() {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
 
-      <main className="min-h-screen pt-16 
-                       bg-light-background dark:bg-dark-background 
-                       text-light-text dark:text-dark-text 
+      <main className="min-h-screen pt-16 pb-20
+                       bg-light-background dark:bg-dark-background
+                       text-light-text dark:text-dark-text
                        transition-colors duration-500">
         
         {/* --- HERO SECTION --- */}
@@ -952,48 +1003,43 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- CONTACT SECTION --- */}
-        <section className="bg-light-surface/50 dark:bg-dark-surface/50 py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Let's <span className="text-primary-accent">Connect</span>
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-              Open to backend engineering opportunities and interesting projects
-            </p>
-
-            <div className="flex justify-center space-x-6 mb-8">
-              <a href="https://github.com/yourgithub"
-                 className="flex items-center space-x-2 px-6 py-3 text-lg font-semibold
-                            text-light-text dark:text-dark-text
-                            border-2 border-secondary-accent rounded-lg
-                            hover:bg-secondary-accent/10 transition-all duration-300">
-                <span>GitHub</span>
-              </a>
-
-              <a href="https://linkedin.com/in/yi-ping-jiang/"
-                 className="flex items-center space-x-2 px-6 py-3 text-lg font-semibold
-                            text-light-text dark:text-dark-text
-                            border-2 border-secondary-accent rounded-lg
-                            hover:bg-secondary-accent/10 transition-all duration-300">
-                <span>LinkedIn</span>
-              </a>
-
-              <a href="mailto:your.email@example.com"
-                 className="flex items-center space-x-2 px-6 py-3 text-lg font-semibold
-                            text-white bg-primary-accent rounded-lg shadow-lg
-                            hover:bg-primary-accent/80 transition-all duration-300">
-                <span>Email Me</span>
-              </a>
-            </div>
-
-            <p className="text-gray-600 dark:text-gray-400">
-              💼 Currently open to backend engineering roles and consulting opportunities
-            </p>
-          </div>
-        </section>
-
       </main>
+
+      {/* --- FIXED FOOTER --- */}
+      <footer className="fixed bottom-0 left-0 w-full z-20
+                         bg-light-surface/95 dark:bg-dark-surface/95
+                         backdrop-blur-md border-t border-gray-200 dark:border-gray-700
+                         shadow-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+          <div className="flex justify-center space-x-3 md:space-x-4">
+            <a href="https://github.com/J-I-P"
+               className="flex items-center justify-center p-2 md:p-3
+                          text-light-text dark:text-dark-text
+                          border-2 border-secondary-accent rounded-lg
+                          hover:bg-secondary-accent hover:text-white hover:shadow-lg hover:scale-105
+                          transition-all duration-300 transform">
+              <SiGithub className="w-4 h-4 md:w-5 md:h-5" />
+            </a>
+
+            <a href="https://linkedin.com/in/yi-ping-jiang/"
+               className="flex items-center justify-center p-2 md:p-3
+                          text-light-text dark:text-dark-text
+                          border-2 border-secondary-accent rounded-lg
+                          hover:bg-secondary-accent hover:text-white hover:shadow-lg hover:scale-105
+                          transition-all duration-300 transform">
+              <SiLinkedin className="w-4 h-4 md:w-5 md:h-5" />
+            </a>
+
+            <a href="mailto:apple80177@gmail.com"
+               className="flex items-center justify-center p-2 md:p-3
+                          text-white bg-primary-accent rounded-lg shadow-lg
+                          hover:bg-primary-accent/80 hover:shadow-xl hover:scale-105
+                          transition-all duration-300 transform">
+              <Mail className="w-4 h-4 md:w-5 md:h-5" />
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
